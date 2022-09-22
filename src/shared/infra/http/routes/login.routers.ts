@@ -12,7 +12,7 @@ loginsRoutes.post(
     [Segments.BODY]: {
       email: Joi.string().email().required(),
       password: Joi.string().required(),
-      userActive: Joi.bool().default(true),
+      //userActive: Joi.bool().default(true),
     },
   }),
   createLoginController.handle,

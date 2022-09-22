@@ -3,7 +3,7 @@ interface ICreateDataUsersDTO {
   loginId?: string;
   firstName: string;
   lastName: string;
-  birthDate: Date;
+  birthDate: string;
   cellNumber: number;
 }
 

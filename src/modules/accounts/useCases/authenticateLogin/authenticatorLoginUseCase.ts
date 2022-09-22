@@ -26,11 +26,15 @@ class AuthenticateLoginUseCase {
   async execute({ email, password }: IRequest): Promise<IResponse> {
     const loginInfo = await this.loginRepository.findbyEmail(email);
 
+    if (loginInfo === null) {
+      throw new AppError('Email or password incorrect');
+    }
+
     if (!email) {
       throw new AppError('Email or password incorrect');
     }
 
-    if (loginInfo.userActive == false) {
+    if (loginInfo.userActive == false || loginInfo.userActive == null) {
       throw new AppError(
         'Usuário bloquedo, contacte o Administrador do sistema.',
       );

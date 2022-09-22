@@ -26,7 +26,6 @@ class DataUsersRepositories implements IDataUserRepository {
       birthDate,
       cellNumber,
     });
-    console.log(user.firstName);
     await this.repositories.save(user);
     return user;
   }

@@ -6,9 +6,6 @@ class CreateDataUsersController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { firstName, lastName, birthDate, cellNumber } = request.body;
     const { loginId } = request.login;
-
-    console.log(firstName);
-
     const createDataUsersUseCase = container.resolve(CreateDataUsersUseCase);
 
     const user = await createDataUsersUseCase.execute({
