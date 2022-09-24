@@ -46,7 +46,7 @@ class AuthenticateLoginUseCase {
       throw new AppError('Email or password incorrect');
     }
 
-    const token = sign({}, '2faa974066a3083a145f300fd3f07f01', {
+    const token = sign({}, process.env.SECRET_KEY, {
       subject: loginInfo.loginId,
       expiresIn: '1d',
     });

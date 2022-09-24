@@ -12,9 +12,7 @@ class FixedAccountController {
       initialDate,
       finalDate,
     } = request.body;
-    const { loginId } = request.login;
 
-    console.log(loginId);
     const fixedAccountUseCase = container.resolve(FixedAccountUseCase);
 
     const fixedAccount = await fixedAccountUseCase.execute({

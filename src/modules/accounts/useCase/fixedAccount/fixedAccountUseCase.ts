@@ -48,7 +48,6 @@ class FixedAccountUseCase {
     }
 
     const findIdUserData = await this.userData.findById(userDataId);
-    console.log('Teste: ', findIdUserData.userDataId);
 
     const initialDateConverted =
       this.dateProvider.convertToTimestamp(initialDate);
