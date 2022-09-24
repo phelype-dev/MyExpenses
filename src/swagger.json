@@ -1,0 +1,162 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ApiMyExpenses",
+    "description": "Hello, We at MyExpenses Team are happy to bring you our newest product. Our product is under development, soon there will be news",
+    "version": "1.0.0",
+    "contact": {
+      "email": "email@teste.com"
+    }
+  },
+  "basePath": "/",
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "name": "authorization",
+      "in": "header",
+      "description": "Authentication token"
+    }
+  },
+  "paths": {
+    "/registration": {
+      "post": {
+        "tags": ["Users Data"],
+        "sumary": "Create users to login",
+        "description": "Create users",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "exemple": {
+                  "email": "email@email.com",
+                  "passwords": "Abcd1234@"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+
+    "/authentication": {
+      "post": {
+        "tags": ["Authentication"],
+        "sumary": "Authentication user",
+        "description": "Authentication",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "exemple": {
+                  "email": "email@email.com",
+                  "password": "ABC1234@"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Authorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/myuser/profile": {
+      "post": {
+        "tags": ["Users Data"],
+        "sumary": "Criando complemento dos dados do usuário",
+        "description": "Creating user data add-on",
+        "requestBody": {
+          "content": {
+            "application/json": {
+
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "birthDate": {
+                    "format": "Date"
+                  },
+                  "cellNumber": {
+                    "type": "integer"
+                  }
+                },
+                "exemple": {
+                  "firstName": "José",
+                  "lastName": "Alencar Ramos",
+                  "birthDate": "1989/12/09",
+                  "cellNumber": "62999993333"
+                }
+              }
+            },
+            "security": [
+              {
+                "Authorization": []
+              }
+            ]
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Token is missing authorization header"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+
+  "definitions": {
+    "Specification": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

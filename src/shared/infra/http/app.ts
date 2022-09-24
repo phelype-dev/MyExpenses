@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
+import swaggerUi from 'swagger-ui-express';
+import swaggerFile from '../../../swagger.json';
 import { AppError } from '../../errors/AppError';
 import { router } from './routes';
 import '../../container';
@@ -13,6 +15,26 @@ const app = express();
 
 //Responsável por habilitar JSON na aplicação//
 app.use(express.json());
+
+const options = {
+  swaggerOptions: {
+    authAction: {
+      authentication: {
+        name: 'authentication',
+        schema: {
+          type: 'apiKey',
+          in: 'header',
+          name: 'Authorization',
+          description: '',
+        },
+        value: 'Bearer <JWT>',
+      },
+    },
+  },
+};
+
+//Chamada para Swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 //Chamada das rotas
 app.use(router);
