@@ -1,4 +1,5 @@
 import { FixedAccountController } from '@modules/accounts/useCase/fixedAccount/fixedAccountController';
+import { celebrate, Joi, Segments } from 'celebrate';
 import { Router } from 'express';
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
@@ -8,6 +9,16 @@ const fixedAccountController = new FixedAccountController();
 
 fixedAccountRoutes.post(
   '/fixed',
+  celebrate({
+    [Segments.BODY]: {
+      userDataId: Joi.string(),
+      nameAccount: Joi.string().required(),
+      descriptionAcoount: Joi.string(),
+      accountValues: Joi.number(),
+      initialDate: Joi.date().required(),
+      finalDate: Joi.date().required(),
+    },
+  }),
   ensureAuthenticated,
   fixedAccountController.handle,
 );

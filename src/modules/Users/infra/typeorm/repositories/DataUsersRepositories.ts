@@ -34,6 +34,11 @@ class DataUsersRepositories implements IDataUserRepository {
     const userData = await this.repositories.findOneBy({ userDataId: id });
     return userData;
   }
+
+  async findByUserData(name: string): Promise<DataUsers> {
+    const userData = await this.repositories.findOneBy({ firstName: name });
+    return userData;
+  }
 }
 
 export { DataUsersRepositories };
