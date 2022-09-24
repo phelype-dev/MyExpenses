@@ -1,5 +1,5 @@
-import { ICreateLoginDTO } from '@modules/accounts/dtos/ICreateLoginDTO';
-import { ILoginsRepository } from '@modules/accounts/repositories/ILoginRepository';
+import { ICreateLoginDTO } from '@modules/Users/dtos/ICreateLoginDTO';
+import { ILoginsRepository } from '@modules/Users/repositories/ILoginRepository';
 import { dataSource } from '@shared/infra/typeorm';
 import { Repository } from 'typeorm';
 import { Login } from '../entities/Login';

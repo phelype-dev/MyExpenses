@@ -1,6 +1,6 @@
-import { DataUsers } from '@modules/accounts/infra/typeorm/entities/Datauser';
-import { IDataUserRepository } from '@modules/accounts/repositories/IDataUserRepository';
-import { ILoginsRepository } from '@modules/accounts/repositories/ILoginRepository';
+import { DataUsers } from '@modules/Users/infra/typeorm/entities/Datauser';
+import { IDataUserRepository } from '@modules/Users/repositories/IDataUserRepository';
+import { ILoginsRepository } from '@modules/Users/repositories/ILoginRepository';
 import { IDateProvider } from '@shared/container/providers/DateProvider/IDateProvider';
 import { AppError } from '@shared/errors/AppError';
 import { inject, injectable } from 'tsyringe';

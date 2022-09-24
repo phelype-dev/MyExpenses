@@ -1,4 +1,4 @@
-import { CreateDataUsersController } from '@modules/accounts/useCases/createDataUsers/createDataUsersController';
+import { CreateDataUsersController } from '@modules/Users/useCases/createDataUsers/createDataUsersController';
 //import { celebrate, Joi, Segments } from 'celebrate';
 import { Router } from 'express';
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';

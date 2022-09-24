@@ -1,5 +1,5 @@
-import { ICreateLoginDTO } from '@modules/accounts/dtos/ICreateLoginDTO';
-import { ILoginsRepository } from '@modules/accounts/repositories/ILoginRepository';
+import { ICreateLoginDTO } from '@modules/Users/dtos/ICreateLoginDTO';
+import { ILoginsRepository } from '@modules/Users/repositories/ILoginRepository';
 import { AppError } from '@shared/errors/AppError';
 import { hash } from 'bcrypt';
 import { inject, injectable } from 'tsyringe';

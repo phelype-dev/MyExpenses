@@ -3,6 +3,7 @@ import { DataUsers } from '../infra/typeorm/entities/Datauser';
 
 interface IDataUserRepository {
   create(data: ICreateDataUsersDTO): Promise<DataUsers>;
+  findById(id: string): Promise<DataUsers>;
 }
 
 export { IDataUserRepository };

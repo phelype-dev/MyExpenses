@@ -1,4 +1,4 @@
-import { CreateLoginController } from '../../../../modules/accounts/useCases/createLogin/createLoginController';
+import { CreateLoginController } from '../../../../modules/Users/useCases/createLogin/createLoginController';
 import { Router } from 'express';
 import { celebrate, Segments, Joi } from 'celebrate';
 

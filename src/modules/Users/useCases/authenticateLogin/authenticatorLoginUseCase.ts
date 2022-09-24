@@ -1,4 +1,4 @@
-import { ILoginsRepository } from '@modules/accounts/repositories/ILoginRepository';
+import { ILoginsRepository } from '@modules/Users/repositories/ILoginRepository';
 import { AppError } from '@shared/errors/AppError';
 import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';

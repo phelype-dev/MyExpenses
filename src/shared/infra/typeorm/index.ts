@@ -1,8 +1,9 @@
-import { Login } from '@modules/accounts/infra/typeorm/entities/Login';
+import { Login } from '@modules/Users/infra/typeorm/entities/Login';
 import { warn } from 'console';
 import { DataSource } from 'typeorm';
 import dotenv from 'dotenv';
-import { DataUsers } from '@modules/accounts/infra/typeorm/entities/Datauser';
+import { DataUsers } from '@modules/Users/infra/typeorm/entities/Datauser';
+import { FixedAccounts } from '@modules/accounts/infra/typeorm/entities/fixedAccounts';
 dotenv.config();
 
 export const dataSource = new DataSource({
@@ -14,7 +15,7 @@ export const dataSource = new DataSource({
   database: process.env.DB_DATABASE,
   //connectTimeoutMS: 300,
   useUTC: true,
-  entities: [Login, DataUsers],
+  entities: [Login, DataUsers, FixedAccounts],
   migrations: ['./src/shared/infra/typeorm/migrations/*.ts'],
   //poolErrorHandler: warn,
 });

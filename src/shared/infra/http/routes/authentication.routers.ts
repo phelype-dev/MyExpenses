@@ -1,4 +1,4 @@
-import { AuthenticateLoginController } from '@modules/accounts/useCases/authenticateLogin/authenticateLoginController';
+import { AuthenticateLoginController } from '@modules/Users/useCases/authenticateLogin/authenticateLoginController';
 import { celebrate, Joi, Segments } from 'celebrate';
 import { Router } from 'express';
 
