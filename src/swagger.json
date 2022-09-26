@@ -5,7 +5,7 @@
     "description": "Hello, We at MyExpenses Team are happy to bring you our newest product. Our product is under development, soon there will be news",
     "version": "1.0.0",
     "contact": {
-      "email": "email@teste.com"
+      "email": "phelypell1@hotmail.com"
     }
   },
   "basePath": "/",
@@ -17,6 +17,7 @@
       "description": "Authentication token"
     }
   },
+
   "paths": {
     "/registration": {
       "post": {
@@ -91,6 +92,7 @@
         }
       }
     },
+
     "/myuser/profile": {
       "post": {
         "tags": ["Users Data"],
