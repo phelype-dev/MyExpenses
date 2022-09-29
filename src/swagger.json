@@ -140,7 +140,7 @@
         "schema": "bearer",
         "bearerFormat": "JWT",
         "name": "Authorization",
-        "in": "header"
+        "in": "header Informar  'Bearer' antes do token"
       }
     }
   }
