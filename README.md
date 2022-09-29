@@ -16,5 +16,4 @@ Abaixo temos uma pequena demostração das funções já desenvolvidas.
 
 
 Diagrama Relacional:
-
-MyExpenses.png
+![MyExpenses](https://user-images.githubusercontent.com/81370546/193127855-579485d1-3b6f-4467-b5ab-e41a386cf25e.png)
