@@ -13,25 +13,7 @@ import { errors } from 'celebrate';
 
 const app = express();
 
-//Responsável por habilitar JSON na aplicação//
 app.use(express.json());
-
-const options = {
-  swaggerOptions: {
-    authAction: {
-      authentication: {
-        name: 'authentication',
-        schema: {
-          type: 'apiKey',
-          in: 'header',
-          name: 'Authorization',
-          description: '',
-        },
-        value: 'Bearer <JWT>',
-      },
-    },
-  },
-};
 
 //Chamada para Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));

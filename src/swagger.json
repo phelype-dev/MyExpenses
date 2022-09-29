@@ -8,15 +8,6 @@
       "email": "phelypell1@hotmail.com"
     }
   },
-  "basePath": "/",
-  "securityDefinitions": {
-    "Authorization": {
-      "type": "apiKey",
-      "name": "authorization",
-      "in": "header",
-      "description": "Authentication token"
-    }
-  },
 
   "paths": {
     "/registration": {
@@ -98,10 +89,10 @@
         "tags": ["Users Data"],
         "sumary": "Criando complemento dos dados do usuário",
         "description": "Creating user data add-on",
+        "security": [{ "bearerAuth": [] }],
         "requestBody": {
           "content": {
             "application/json": {
-
               "schema": {
                 "type": "object",
                 "properties": {
@@ -125,12 +116,7 @@
                   "cellNumber": "62999993333"
                 }
               }
-            },
-            "security": [
-              {
-                "Authorization": []
-              }
-            ]
+            }
           }
         },
         "responses": {
@@ -147,17 +133,14 @@
       }
     }
   },
-
-  "definitions": {
-    "Specification": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        }
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "apiKey",
+        "schema": "bearer",
+        "bearerFormat": "JWT",
+        "name": "Authorization",
+        "in": "header"
       }
     }
   }
