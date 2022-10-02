@@ -17,6 +17,7 @@ fixedAccountRoutes.post(
       accountValues: Joi.number(),
       initialDate: Joi.date().required(),
       finalDate: Joi.date().required(),
+      isActive: Joi.boolean().required(),
     },
   }),
   ensureAuthenticated,

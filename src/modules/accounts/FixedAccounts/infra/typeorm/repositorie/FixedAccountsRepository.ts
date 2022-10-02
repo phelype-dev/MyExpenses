@@ -1,5 +1,5 @@
-import { ICreateFixedAccountsDTO } from '@modules/accounts/dtos/ICreateFixedAccountsDTO';
-import { IFixedAccountsRepository } from '@modules/accounts/repositories/IFixedAccountsRepository';
+import { ICreateFixedAccountsDTO } from '@modules/accounts/FixedAccounts/dtos/ICreateFixedAccountsDTO';
+import { IFixedAccountsRepository } from '@modules/accounts/FixedAccounts/repositories/IFixedAccountsRepository';
 import { dataSource } from '@shared/infra/typeorm';
 import { Repository } from 'typeorm';
 import { FixedAccounts } from '../entities/fixedAccounts';
@@ -18,6 +18,7 @@ class FixedAccountsRepository implements IFixedAccountsRepository {
     accountValues,
     initialDate,
     finalDate,
+    isActive,
   }: ICreateFixedAccountsDTO): Promise<FixedAccounts> {
     const fixedAccounts = this.respository.create({
       userDataId,
@@ -26,6 +27,7 @@ class FixedAccountsRepository implements IFixedAccountsRepository {
       accountValues,
       initialDate,
       finalDate,
+      isActive,
     });
     await this.respository.save(fixedAccounts);
     return fixedAccounts;

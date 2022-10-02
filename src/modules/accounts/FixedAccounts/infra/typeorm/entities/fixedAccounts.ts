@@ -39,6 +39,9 @@ class FixedAccounts {
   @CreateDateColumn()
   finalDate: Date;
 
+  @Column()
+  isActive: boolean;
+
   @CreateDateColumn()
   created_at: Date;
 

@@ -6,6 +6,7 @@ interface ICreateFixedAccountsDTO {
   accountValues: number;
   initialDate: Date;
   finalDate: Date;
+  isActive: boolean;
 }
 
 export { ICreateFixedAccountsDTO };

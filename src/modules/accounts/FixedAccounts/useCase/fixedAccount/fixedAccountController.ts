@@ -11,6 +11,7 @@ class FixedAccountController {
       accountValues,
       initialDate,
       finalDate,
+      isActive,
     } = request.body;
 
     const fixedAccountUseCase = container.resolve(FixedAccountUseCase);
@@ -22,6 +23,7 @@ class FixedAccountController {
       accountValues,
       initialDate,
       finalDate,
+      isActive,
     });
 
     return response.status(201).json(fixedAccount);

@@ -17,6 +17,7 @@ interface IRequest {
   accountValues: number;
   initialDate: Date;
   finalDate: Date;
+  isActive: boolean;
 }
 
 @injectable()
@@ -39,6 +40,7 @@ class FixedAccountUseCase {
     accountValues,
     initialDate,
     finalDate,
+    isActive,
   }: IRequest): Promise<FixedAccounts> {
     const nameAccountAlreadyExists =
       await this.fixedAccounts.findByFixedAccountName(nameAccount);
@@ -61,6 +63,7 @@ class FixedAccountUseCase {
       accountValues,
       initialDate: initialDateConverted,
       finalDate: finalDateConverted,
+      isActive,
     });
 
     return fixedAccounts;
