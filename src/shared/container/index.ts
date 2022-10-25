@@ -1,5 +1,5 @@
-import { FixedAccountsRepository } from '@modules/accounts/infra/typeorm/repositorie/FixedAccountsRepository';
-import { IFixedAccountsRepository } from '@modules/accounts/repositories/IFixedAccountsRepository';
+import { FixedAccountsRepository } from '@modules/accounts/FixedAccounts/infra/typeorm/repositorie/FixedAccountsRepository';
+import { IFixedAccountsRepository } from '@modules/accounts/FixedAccounts/repositories/IFixedAccountsRepository';
 import { DataUsersRepositories } from '@modules/Users/infra/typeorm/repositories/DataUsersRepositories';
 import { LoginRepository } from '@modules/Users/infra/typeorm/repositories/LoginRespository';
 import { IDataUserRepository } from '@modules/Users/repositories/IDataUserRepository';

@@ -1,9 +1,8 @@
 import { Login } from '@modules/Users/infra/typeorm/entities/Login';
-import { warn } from 'console';
 import { DataSource } from 'typeorm';
 import dotenv from 'dotenv';
 import { DataUsers } from '@modules/Users/infra/typeorm/entities/Datauser';
-import { FixedAccounts } from '@modules/accounts/infra/typeorm/entities/fixedAccounts';
+import { FixedAccounts } from '@modules/accounts/FixedAccounts/infra/typeorm/entities/fixedAccounts';
 dotenv.config();
 
 export const dataSource = new DataSource({

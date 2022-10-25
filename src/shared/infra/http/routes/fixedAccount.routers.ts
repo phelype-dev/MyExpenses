@@ -1,4 +1,4 @@
-import { FixedAccountController } from '@modules/accounts/useCase/fixedAccount/fixedAccountController';
+import { FixedAccountController } from '@modules/accounts/FixedAccounts/useCase/fixedAccount/fixedAccountController';
 import { celebrate, Joi, Segments } from 'celebrate';
 import { Router } from 'express';
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
