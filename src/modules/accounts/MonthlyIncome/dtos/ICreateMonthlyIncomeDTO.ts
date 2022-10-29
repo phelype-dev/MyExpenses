@@ -1,6 +1,6 @@
 interface ICreateMonthlyIncomeDTO {
-  userDataId?: string;
-  valueIcome: number;
+  loginId: string;
+  valueIncome: number;
 }
 
 export { ICreateMonthlyIncomeDTO };

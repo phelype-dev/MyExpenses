@@ -12,10 +12,10 @@ class MonthlyIncomeRepository implements IMonthlyIncomeRepository {
   }
 
   async create({
-    userDataId,
-    valueIcome,
+    loginId,
+    valueIncome,
   }: ICreateMonthlyIncomeDTO): Promise<MonthlyIncome> {
-    const valuesIncomes = this.respository.create({ userDataId, valueIcome });
+    const valuesIncomes = this.respository.create({ loginId, valueIncome });
     await this.respository.save(valuesIncomes);
     return valuesIncomes;
   }

@@ -12,7 +12,7 @@ export class CreateMonthlyIncome1664483367454 implements MigrationInterface {
             isPrimary: true,
           },
           {
-            name: 'userDataId',
+            name: 'loginId',
             type: 'uuid',
             isNullable: false,
           },
@@ -35,13 +35,13 @@ export class CreateMonthlyIncome1664483367454 implements MigrationInterface {
         foreignKeys: [
           {
             //Nome da FK//
-            name: 'FKDataUserMonthlyIncome',
+            name: 'FKLoginMonthlyIncome',
             //Tabela referenciada//
-            referencedTableName: 'DataUsers',
+            referencedTableName: 'Login',
             //referencia da coluna id da table referenciada//
-            referencedColumnNames: ['userDataId'],
+            referencedColumnNames: ['loginId'],
             //Coluna da table que recebera o id da table referenciada//
-            columnNames: ['userDataId'],
+            columnNames: ['loginId'],
             onDelete: 'SET NULL',
             onUpdate: 'SET NULL',
           },
