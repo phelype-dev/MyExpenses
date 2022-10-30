@@ -10,6 +10,7 @@
   },
 
   "paths": {
+
     "/registration": {
       "post": {
         "tags": ["Users Data"],
@@ -131,12 +132,67 @@
           }
         }
       }
+    },
+
+    "/add/fixed": {
+      "post": {
+        "tags": ["Fixed account registration"],
+        "sumary": "Fixed account registration",
+        "description": "Fixed account registration",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nameAccount": {
+                    "type": "string"
+                  },
+                  "descriptionAcoount": {
+                    "type": "string"
+                  },
+                  "accountValues": {
+                    "type": "number"
+                  },
+                  "initialDate": {
+                    "type": "Date"
+                  },
+                  "finalDate": {
+                    "type": "Date"
+                  },
+                  "isActive": {
+                    "type": "boolean"
+                  }
+                },
+                "exemples": {
+                  "nameAccount": "Conta de Água",
+                  "descriptionAcoount": "Conta mensa de Água",
+                  "accountValues": 49.9,
+                  "initialDate": "2009/09/09",
+                  "finalDate": "2022/09/09",
+                  "isActive": true
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
     }
   },
+
   "components": {
     "securitySchemes": {
       "bearerAuth": {
-        "type": "apiKey",
+        "type": "apikey",
         "schema": "bearer",
         "bearerFormat": "JWT",
         "name": "Authorization",
