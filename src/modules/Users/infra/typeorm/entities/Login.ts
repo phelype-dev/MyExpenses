@@ -26,6 +26,7 @@ class Login {
 
   @UpdateDateColumn({ type: 'timestamptz' })
   updated_at: Date;
+  static loginId: string;
 
   constructor() {
     if (!this.loginId) {

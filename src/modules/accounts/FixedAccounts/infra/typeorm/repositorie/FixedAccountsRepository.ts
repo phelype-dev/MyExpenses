@@ -12,7 +12,7 @@ class FixedAccountsRepository implements IFixedAccountsRepository {
   }
 
   async create({
-    userDataId,
+    loginId,
     nameAccount,
     descriptionAcoount,
     accountValues,
@@ -21,7 +21,7 @@ class FixedAccountsRepository implements IFixedAccountsRepository {
     isActive,
   }: ICreateFixedAccountsDTO): Promise<FixedAccounts> {
     const fixedAccounts = this.respository.create({
-      userDataId,
+      loginId,
       nameAccount,
       descriptionAcoount,
       accountValues,

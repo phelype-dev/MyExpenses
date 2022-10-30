@@ -5,7 +5,6 @@ import { FixedAccountUseCase } from './fixedAccountUseCase';
 class FixedAccountController {
   async handle(request: Request, response: Response): Promise<Response> {
     const {
-      userDataId,
       nameAccount,
       descriptionAcoount,
       accountValues,
@@ -13,11 +12,12 @@ class FixedAccountController {
       finalDate,
       isActive,
     } = request.body;
+    const { loginId } = request.login;
 
     const fixedAccountUseCase = container.resolve(FixedAccountUseCase);
 
     const fixedAccount = await fixedAccountUseCase.execute({
-      userDataId,
+      loginId: loginId,
       nameAccount,
       descriptionAcoount,
       accountValues,

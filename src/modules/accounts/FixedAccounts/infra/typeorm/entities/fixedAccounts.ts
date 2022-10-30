@@ -1,4 +1,4 @@
-import { DataUsers } from '@modules/Users/infra/typeorm/entities/Datauser';
+import { Login } from '@modules/Users/infra/typeorm/entities/Login';
 import {
   Column,
   CreateDateColumn,
@@ -14,12 +14,12 @@ class FixedAccounts {
   @PrimaryColumn()
   fixedAccountsId: string;
 
-  @ManyToOne(() => DataUsers)
-  @JoinColumn({ name: 'userDataId' })
-  dataUser: DataUsers;
+  @ManyToOne(() => Login)
+  @JoinColumn({ name: 'loginId' })
+  login: Login;
 
   @Column()
-  userDataId: string;
+  loginId: string;
 
   @Column()
   nameAccount: string;

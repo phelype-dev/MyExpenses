@@ -1,6 +1,6 @@
 interface ICreateFixedAccountsDTO {
   fixedAccountsId?: string;
-  userDataId: string;
+  loginId: string;
   nameAccount: string;
   descriptionAcoount: string;
   accountValues: number;
