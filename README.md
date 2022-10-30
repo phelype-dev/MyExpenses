@@ -1,4 +1,4 @@
-# MyExpensesMyExpenses está sendo idealizado para facilitar a vida financeira, já que com ele será possível gerenciar seus gastos.
+# MyExpenses está sendo idealizado para facilitar a vida financeira, já que com ele será possível gerenciar seus gastos.
 
 Ainda estamos em desenvolvimento, logo terá novidades.
 
