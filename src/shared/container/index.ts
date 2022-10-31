@@ -1,5 +1,7 @@
 import { FixedAccountsRepository } from '@modules/accounts/FixedAccounts/infra/typeorm/repositorie/FixedAccountsRepository';
 import { IFixedAccountsRepository } from '@modules/accounts/FixedAccounts/repositories/IFixedAccountsRepository';
+import { MonthlyExpensesRepositories } from '@modules/accounts/MonthlyExpenses/infra/typeorm/MonthlyExpensesRepositories';
+import { IMonthlyExpensesRepository } from '@modules/accounts/MonthlyExpenses/repositories/IMonthlyExpensesRepository';
 import { MonthlyIncomeRepository } from '@modules/accounts/MonthlyIncome/infra/typeorm/repositories/MonthlyIncomeRepository';
 import { IMonthlyIncomeRepository } from '@modules/accounts/MonthlyIncome/repositories/IMonthlyIncomeRepository';
 import { DataUsersRepositories } from '@modules/Users/infra/typeorm/repositories/DataUsersRepositories';
@@ -27,4 +29,9 @@ container.registerSingleton<IFixedAccountsRepository>(
 container.registerSingleton<IMonthlyIncomeRepository>(
   'MonthlyIncomeRepository',
   MonthlyIncomeRepository,
+);
+
+container.registerSingleton<IMonthlyExpensesRepository>(
+  'MonthlyExpensesRepositories',
+  MonthlyExpensesRepositories,
 );

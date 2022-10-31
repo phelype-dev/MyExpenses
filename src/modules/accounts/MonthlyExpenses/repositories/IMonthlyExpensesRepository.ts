@@ -1,5 +1,5 @@
 import { ICreateMonthlyExpensesDTO } from '../dtos/ICreateMonthlyExpensesDTO';
-import { MonthlyExpenses } from '../infra/typeorm/entities/MonthlyExpenses';
+import { MonthlyExpenses } from '../infra/entities/MonthlyExpenses';
 
 interface IMonthlyExpensesRepository {
   create(data: ICreateMonthlyExpensesDTO): Promise<MonthlyExpenses>;
