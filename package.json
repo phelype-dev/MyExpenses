@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "test": "NODE_ENV='test' jest",
-    "start": "node src/shared/infra/http/server.ts",
+    "start": "ts-node-dev --inspect -r tsconfig-paths/register --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "dev": "ts-node-dev --inspect -r tsconfig-paths/register --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "lint": "eslint . --ext .ts",
