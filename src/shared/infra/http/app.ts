@@ -10,10 +10,12 @@ import { AppError } from '../../errors/AppError';
 import { router } from './routes';
 import '../../container';
 import { errors } from 'celebrate';
+import cors from 'cors';
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 //Chamada para Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
