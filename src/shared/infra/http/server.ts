@@ -2,7 +2,7 @@ import { AppError } from '@shared/errors/AppError';
 import { dataSource } from '../typeorm';
 import { app } from './app';
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || '3000';
 dataSource.initialize().then(async () => {
   try {
     const server = app.listen(3000, () => {
