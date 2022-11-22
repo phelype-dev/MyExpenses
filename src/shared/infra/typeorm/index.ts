@@ -16,6 +16,6 @@ export const dataSource = new DataSource({
   //connectTimeoutMS: 300,
   useUTC: true,
   entities: [Login, DataUsers, FixedAccounts, MonthlyIncome],
-  migrations: ['./src/shared/infra/typeorm/migrations/*.ts'],
+  migrations: ['./dist/shared/infra/typeorm/migrations/*.js'],
   //poolErrorHandler: warn,
 });
