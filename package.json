@@ -5,6 +5,7 @@
     "node": "16.16.0",
     "yarn": "1.22.19"
   },
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
     "test": "NODE_ENV='test' jest",
