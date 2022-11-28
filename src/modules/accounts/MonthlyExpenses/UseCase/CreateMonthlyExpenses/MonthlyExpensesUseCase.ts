@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
-import { MonthlyExpenses } from '../infra/entities/MonthlyExpenses';
-import { IMonthlyExpensesRepository } from '../repositories/IMonthlyExpensesRepository';
+import { MonthlyExpenses } from '../../infra/entities/MonthlyExpenses';
+import { IMonthlyExpensesRepository } from '../../repositories/IMonthlyExpensesRepository';
 
 interface IRequest {
   fixedAccountsId: string;

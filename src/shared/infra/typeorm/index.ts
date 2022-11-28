@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import { DataUsers } from '@modules/Users/infra/typeorm/entities/Datauser';
 import { FixedAccounts } from '@modules/accounts/FixedAccounts/infra/typeorm/entities/fixedAccounts';
 import { MonthlyIncome } from '@modules/accounts/MonthlyIncome/infra/typeorm/entities/MonthlyIncome';
+import { MonthlyExpenses } from '@modules/accounts/MonthlyExpenses/infra/entities/MonthlyExpenses';
 dotenv.config();
 
 export const dataSource = new DataSource({
@@ -15,7 +16,7 @@ export const dataSource = new DataSource({
   database: process.env.DB_DATABASE,
   //connectTimeoutMS: 300,
   useUTC: true,
-  entities: [Login, DataUsers, FixedAccounts, MonthlyIncome],
+  entities: [Login, DataUsers, FixedAccounts, MonthlyIncome, MonthlyExpenses],
   migrations: ['./dist/shared/infra/typeorm/migrations/*.js'],
   //poolErrorHandler: warn,
 });
