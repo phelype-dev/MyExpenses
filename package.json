@@ -1,10 +1,6 @@
 {
   "name": "apiexpenses",
   "version": "1.0.0",
-  "engines": {
-    "node": "16.16.0",
-    "yarn": "1.22.19"
-  },
   "main": "server.js",
   "license": "MIT",
   "scripts": {
